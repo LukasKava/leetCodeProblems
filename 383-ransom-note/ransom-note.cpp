@@ -2,7 +2,7 @@ class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         int i;
-        int lowercases[32] = {0};
+        int lowercases[26] = {0};
         for (i = 0; ransomNote[i] != '\0'; i++)
         {
             lowercases[ransomNote[i] - 97]++;
@@ -12,7 +12,7 @@ public:
             lowercases[magazine[i] - 97]--;
         }
 
-        for (i = 0; i < 32; i++)
+        for (i = 0; i < 26; i++)
         {
             if (lowercases[i] > 0)
                 return (false);
