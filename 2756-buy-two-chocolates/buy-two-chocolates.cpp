@@ -38,11 +38,8 @@ public:
         int total = prices[0] + prices[1];
         if(total > money)
         {
-            return money;
+            return (money);
         }
-        else
-        {
-            return money-total;
-        }
+        return (money-total);
     }
 };
