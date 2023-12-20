@@ -9,8 +9,7 @@ public:
         }
         for (int i = 0; ransomNote[i] != '\0'; i++)
         {
-            lowercases[ransomNote[i] - 'a']--;
-            if (lowercases[ransomNote[i] - 'a'] < 0)
+            if (--lowercases[ransomNote[i] - 'a'] < 0)
                 return (false);
         }
         return (true);
