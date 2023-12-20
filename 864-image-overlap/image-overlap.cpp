@@ -16,17 +16,18 @@ public:
                     pos_img2.push_back({i, x});
             }
         }
-        std::map<pair<int, int>, int>   pos_move_count;
+
+        std::unordered_map<int , int>   move_count;
         for (std::vector<pair<int, int>>::iterator it_1 = pos_img1.begin(); it_1 != pos_img1.end(); it_1++)
         {
             for (std::vector<pair<int, int>>::iterator it_2 = pos_img2.begin(); it_2 != pos_img2.end(); it_2++)
             {
                 //we take the difference from arrays
-                pos_move_count[{it_2->first - it_1->first, it_2->second - it_1->second}]++;
+                move_count[(it_2->first - it_1->first) * 100 + (it_2->second - it_1->second)]++;
             }
         }
 
-        for (std::map<pair<int, int>, int>::iterator it = pos_move_count.begin(); it != pos_move_count.end(); it++)
+        for (std::unordered_map<int, int>::iterator it = move_count.begin(); it != move_count.end(); it++)
         {
             if (it->second > actual_max)
                 actual_max = it->second;
