@@ -14,6 +14,7 @@ public:
 
         for (i = 0; i < 26 && lowercases[i] <= 0; i++)
         {
+            continue;
         }
         return (i == 26 ? true : false);
     }
