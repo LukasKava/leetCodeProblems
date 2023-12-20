@@ -12,11 +12,9 @@ public:
             lowercases[magazine[i] - 'a']--;
         }
 
-        for (i = 0; i < 26; i++)
+        for (i = 0; i < 26 && lowercases[i] <= 0; i++)
         {
-            if (lowercases[i] > 0)
-                return (false);
         }
-        return (true);
+        return (i == 26 ? true : false);
     }
 };
