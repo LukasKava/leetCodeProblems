@@ -5,11 +5,11 @@ public:
         int lowercases[26] = {0};
         for (i = 0; ransomNote[i] != '\0'; i++)
         {
-            lowercases[ransomNote[i] - 97]++;
+            lowercases[ransomNote[i] - 'a']++;
         }
         for (i = 0; magazine[i] != '\0'; i++)
         {
-            lowercases[magazine[i] - 97]--;
+            lowercases[magazine[i] - 'a']--;
         }
 
         for (i = 0; i < 26; i++)
