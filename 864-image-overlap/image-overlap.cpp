@@ -2,13 +2,12 @@ class Solution {
 public:
     int largestOverlap(vector<vector<int>>& img1, vector<vector<int>>& img2) {
         int actual_max = 0;
-        int l_size = img1.size();
         std::vector<pair<int, int>> pos_img1;
         std::vector<pair<int, int>> pos_img2;
         
-        for (int i = 0; i < l_size; i++)
+        for (int i = 0; i < img1.size(); i++)
         {
-            for (int x = 0; x < l_size; x++)
+            for (int x = 0; x < img1.size(); x++)
             {
                 if (img1[i][x] == 1)
                     pos_img1.push_back({i, x});
