@@ -11,10 +11,6 @@ public:
                 front++;
             }
         }
-        for( int x = 0; x < nums.size(); x++) {
-            std::cout << nums[x] << " , ";
-        }
-        std::cout << std::endl;
         return (front);
 }
 };
